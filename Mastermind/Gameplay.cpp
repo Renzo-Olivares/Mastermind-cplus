@@ -25,6 +25,7 @@ int Gameplay::init()
         //10 loops for 10 attempts
 
 		//round i user guesses
+		std::cout << std::endl;
 		std::cout << "\nAttempt " << i + 1 << " :" << std::endl;
 		userAttempt();
 
