@@ -9,28 +9,11 @@ void Cpu::genSeq(int sz)
 	for (int i = 0; i < sz; i++) {
 		Color* ptr = nullptr;
 		ptr = new Color();
-		ptr->setColor(static_cast<Color::COL>((rand() % 6) + 0));
+		ptr->setColor(static_cast<Color::COL>(dist(mt)));
 		ptr->setPos(i);
 		ranSeq->push_back(*ptr);
 	}
-	/*
-	if (!dupe) {
-		//check if unique
-		while (!unique) {
-			//generate new
-		}
-	}*/
 }
-
-/*bool Cpu::getisUnique()
-{
-
-}
-//bool for isunique
-	//calls unique on list
-	//check if two list equal each other
-	//if they do then it was unique
-	//if they dont then it was not unique*/
 
 void Cpu::showGuess()
 {

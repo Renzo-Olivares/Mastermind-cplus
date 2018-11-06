@@ -12,8 +12,6 @@ int Gameplay::init()
 	//setDupe();
 	//create cpu object and generate random sequence
 	Cpu* relCpu = new Cpu(diff);
-	//pull random sequence over
-	relCpu->showGuess();
 
 	//fill vector with colors from cpu generated random sequence
 	for (int i = 0; i < diff; i++) {
@@ -61,12 +59,9 @@ int Gameplay::init()
 			char c;
 			while (std::cin.get(c)) {
 				std::cout << "\nYou Win" << std::endl;
-				std::cout << "Would you like to play again? (0 or 1)" << std::endl;
+				std::cout << "Press 0 to end the game" << std::endl;
 				std::cin >> select;
-				if (select) {
-					break;
-				}
-				else
+				if (!select)
 					exit(0);
 			}
 		}
@@ -76,12 +71,9 @@ int Gameplay::init()
 		char c;
 		while (std::cin.get(c)) {
 			std::cout << "\nYou Lose" << std::endl;
-			std::cout << "Would you like to play again? (0 or 1)" << std::endl;
+			std::cout << "Press 0 to exit" << std::endl;
 			std::cin >> select;
-			if (select) {
-				break;
-			}
-			else
+			if (!select)
 				exit(0);
 		}
 	}
@@ -143,21 +135,10 @@ void Gameplay::setnGuess(std::string guess)
 	}
 }
 
-/*void Gameplay::setDupe()
-{
-	std::cout << "\nWould you like to enable duplicates? (0-no or 1-yes): ";
-	std::cin >> dupe;
-}*/
-
 int Gameplay::getDiff()
 {
 	return diff;
 }
-
-/*bool Gameplay::getDupe()
-{
-	return dupe;
-}*/
 
 void Gameplay::rules()
 {

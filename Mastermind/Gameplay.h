@@ -15,13 +15,10 @@ class Gameplay
 	std::string sGuess = "";
 	int nGuess = 0;
 	int gPos = 0;
-	int rPos = 0;
 	bool testbool = 0;
 	bool isWin = 0;
 	int select = 0;
 	std::string gCol = "";
-	std::string rCol = "";
-	//bool dupe = 0;
 	enum DIFFI { EASY, MEDIUM, HARD };
 	DIFFI diffSet;
 	std::deque <Color> *guess = new std::deque <Color>;
@@ -38,9 +35,7 @@ class Gameplay
     }
     int init();
 	void setDiff();
-	//void setDupe();
 	int getDiff();
-	//bool getDupe();
 	void rules();
 	void setnGuess(std::string);
 	void userAttempt();

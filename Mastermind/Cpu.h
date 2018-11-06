@@ -10,7 +10,6 @@
 class Cpu {
 private:
 	std::deque <Color> *ranSeq = new std::deque <Color>;
-	//bool isUnique = 0;
 public:
 	Cpu(int n) {
 		genSeq(n);
@@ -24,8 +23,6 @@ public:
 	void showGuess();
 	std::string showCol(int);
 	int showPos(int);
-	//void setUnique();
-	//bool getisUnique();
 };
 
 #endif
