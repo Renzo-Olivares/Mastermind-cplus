@@ -8,8 +8,7 @@ int Gameplay::init()
 {
 	//set the difficulty
 	setDiff();
-	//set duplicates
-	//setDupe();
+
 	//create cpu object and generate random sequence
 	Cpu* relCpu = new Cpu(diff);
 
@@ -78,8 +77,6 @@ int Gameplay::init()
 				exit(0);
 		}
 	}
-
-	//std::cin >> dupe;
 }
 
 void Gameplay::setDiff()

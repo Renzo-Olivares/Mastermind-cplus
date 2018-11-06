@@ -27,8 +27,3 @@ int main() {
 
     return 0;
 }
-
-
-//Create gameplay object
-//Cpu object with random sequence generated
-//difficulty change random sequence generated (4,6,8)
