@@ -41,6 +41,5 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
-    <None Include="README.md" />
   </ItemGroup>
 </Project>
