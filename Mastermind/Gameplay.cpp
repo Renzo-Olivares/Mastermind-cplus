@@ -56,26 +56,14 @@ int Gameplay::init()
 		flushVec();
 		flush();
 		if (isWin) {
-			char c;
-			while (std::cin.get(c)) {
 				std::cout << "\nYou Win" << std::endl;
-				std::cout << "Press 0 to end the game" << std::endl;
-				std::cin >> select;
-				if (!select)
-					exit(0);
-			}
+				return 0;
 		}
     }
 
 	if (!isWin) {
-		char c;
-		while (std::cin.get(c)) {
 			std::cout << "\nYou Lose" << std::endl;
-			std::cout << "Press 0 to exit" << std::endl;
-			std::cin >> select;
-			if (!select)
-				exit(0);
-		}
+			return 0;
 	}
 }
 
