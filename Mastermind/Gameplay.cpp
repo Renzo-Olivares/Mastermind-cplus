@@ -44,7 +44,7 @@ int Gameplay::init()
 		}
 		else {
 			int count = 0;
-			std::cout << "\nHints: " << std::endl;
+			std::cout << "\nHints: ";
 			for (it = guess->begin(); it != guess->end(); ++it) {
 				gPos = it->getPos() - 1;
 				gCol = it->getColor();
@@ -56,14 +56,14 @@ int Gameplay::init()
 		flushVec();
 		flush();
 		if (isWin) {
-				std::cout << "\nYou Win" << std::endl;
-				return 0;
+			std::cout << std::endl << "\nCongratulations You Win!" << std::endl;
+			return 0;
 		}
     }
 
 	if (!isWin) {
-			std::cout << "\nYou Lose" << std::endl;
-			return 0;
+		std::cout << std::endl << "\nUnfortunately You Lost" << std::endl;
+		return 0;
 	}
 }
 
