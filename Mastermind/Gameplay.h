@@ -42,6 +42,7 @@ class Gameplay{
 		bool colorExists(std::string, int);
 		void flush();
 		void flushVec();
+		void hintsDisp();
 		bool check();
 };
 

@@ -41,16 +41,10 @@ int Gameplay::init()
 			std::cout << "\nAttempt " << i + 1 << " :" << std::endl;
 			flush();
 			userAttempt();
+			hintsDisp();
 		}
 		else {
-			int count = 0;
-			std::cout << "\nHints: ";
-			for (it = guess->begin(); it != guess->end(); ++it) {
-				gPos = it->getPos() - 1;
-				gCol = it->getColor();
-				hint(gPos, count, gCol);
-				count++;
-			}
+			hintsDisp();
 		}
 		check();
 		flushVec();
@@ -205,4 +199,17 @@ bool Gameplay::check()
 	}
 
 	return isWin;
+}
+
+void Gameplay::hintsDisp()
+{
+	std::deque <Color> ::iterator it;
+	int count = 0;
+	std::cout << "\nHints: ";
+	for (it = guess->begin(); it != guess->end(); ++it) {
+		gPos = it->getPos() - 1;
+		gCol = it->getColor();
+		hint(gPos, count, gCol);
+		count++;
+	}
 }
